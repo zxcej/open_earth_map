@@ -476,7 +476,7 @@ class UNetFormer(nn.Module):
             backbone_name,
             features_only=True,
             output_stride=32,
-            out_indices=(1, 2, 3, 4),
+            out_indices=(0, 1, 2, 3),
             pretrained=pretrained,
             in_chans=in_channels,
         )

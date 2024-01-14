@@ -6,7 +6,7 @@ import torch.utils.checkpoint as checkpoint
 import numpy as np
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 import timm
-from model.swintransformerv2 import SwinTransformerV2
+#from model.swintransformerv2 import SwinTransformerV2
 
 class Mlp(nn.Module):
     """ Multilayer perceptron."""

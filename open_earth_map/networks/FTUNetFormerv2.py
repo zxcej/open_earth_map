@@ -966,7 +966,12 @@ class FTUNetFormer(nn.Module):
                  ):
         super().__init__()
 
-        self.backbone = SwinTransformerV2(embed_dim=embed_dim, depths=depths, num_heads=num_heads, frozen_stages=freeze_stages)
+        #self.backbone = SwinTransformerV2(embed_dim=embed_dim, depths=depths, num_heads=num_heads, frozen_stages=freeze_stages)
+        self.backbone = timm.create_model(
+            'swinv2_tiny_window8_256',
+            features_only=True,
+            pretrained=True,
+        )
         encoder_channels = [embed_dim, embed_dim*2, embed_dim*4, embed_dim*8]
         self.decoder = Decoder(encoder_channels, decode_channels, dropout, window_size, num_classes)
 

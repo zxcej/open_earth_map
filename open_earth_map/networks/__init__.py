@@ -1,3 +1,3 @@
 from .unet import UNet
 from .unetformer import UNetFormer
-from .FTUnetFormer import *
+from .FTUnetformer import *

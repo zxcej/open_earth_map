@@ -462,7 +462,7 @@ class Decoder(nn.Module):
 class UNetFormer(nn.Module):
     def __init__(
         self,
-        decode_channels=64,
+        decode_channels=256,
         dropout=0.1,
         backbone_name="swinv2_small_window8_256",
         pretrained=True,
